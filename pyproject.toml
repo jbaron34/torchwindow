@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "torchwindow"
+version = "1.0.0"
+description = "Display tensors directly from GPU"
+authors = ["Jeremy <jbaron34@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/jbaron34/torchwindow"
+repository = "https://github.com/jbaron34/torchwindow"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pysdl2 = "^0.9.14"
+pysdl2-dll = "^2.24.1"
+numpy = "^1.23.4"
+torch = { version = "=1.13.0+cu117", source = "pytorch" }
+pyopengl = "^3.1.6"
+cuda-python = "^11.8.0"
+
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu117/"
+secondary = true
+
+
+[tool.poetry.group.dev.dependencies]
+black = {version = "^22.10.0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

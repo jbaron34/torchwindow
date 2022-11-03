@@ -127,36 +127,17 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
-name = "torch"
-version = "1.13.0+cu117"
-description = "Tensors and Dynamic neural networks in Python with strong GPU acceleration"
-category = "main"
-optional = false
-python-versions = ">=3.7.0"
-
-[package.dependencies]
-typing-extensions = "*"
-
-[package.extras]
-opt-einsum = ["opt-einsum (>=3.3)"]
-
-[package.source]
-type = "legacy"
-url = "https://download.pytorch.org/whl/cu117"
-reference = "pytorch"
-
-[[package]]
 name = "typing-extensions"
 version = "4.4.0"
 description = "Backported and Experimental Type Hints for Python 3.7+"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "384dcbe60a9fb2c2f1fa2e47795320f1eeb99a8bcfa29ba81567c0b93386ee02"
+content-hash = "43561555c9484ee394dd5bcb564f4b7613da7af2276101ac701f7fdc892103f6"
 
 [metadata.files]
 black = [
@@ -314,17 +295,6 @@ pysdl2-dll = [
 tomli = [
     {file = "tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
     {file = "tomli-2.0.1.tar.gz", hash = "sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"},
-]
-torch = [
-    {file = "torch-1.13.0+cu117-cp310-cp310-linux_x86_64.whl", hash = "sha256:7f013d8097cb3741ac8d6745a63ef3c945df9be40514fbc026409261c234c2e2"},
-    {file = "torch-1.13.0+cu117-cp310-cp310-win_amd64.whl", hash = "sha256:a0b87b3c87e16f472aa5c87dd31a071211cdec972de280ad1aacff0d245354f8"},
-    {file = "torch-1.13.0+cu117-cp311-cp311-linux_x86_64.whl", hash = "sha256:b3b3dd55629adad8b0c679444cee785ffef729516c5472de4bd5a4d199e1c15d"},
-    {file = "torch-1.13.0+cu117-cp37-cp37m-linux_x86_64.whl", hash = "sha256:eaecf21f4944f62302f73a6a69f0a8fa3f25ad3cff536b1eef5a5cf4203b6fd0"},
-    {file = "torch-1.13.0+cu117-cp37-cp37m-win_amd64.whl", hash = "sha256:08a059d4f298ed042c541c326969004252b0a106a960150163587560782879b4"},
-    {file = "torch-1.13.0+cu117-cp38-cp38-linux_x86_64.whl", hash = "sha256:3abd0161ed86be34ab68fc418005eeb0c944bacc366ed6cce77ab8fac1fc2fe1"},
-    {file = "torch-1.13.0+cu117-cp38-cp38-win_amd64.whl", hash = "sha256:888a5d41fd7b96195375bdf79e1ef14919bb8bdcd024b727ee3fa1ae8fa196cd"},
-    {file = "torch-1.13.0+cu117-cp39-cp39-linux_x86_64.whl", hash = "sha256:cd0753d6ef169a6a5d7224b51e2fdf1acac740f1efc322a6974cc8197535076b"},
-    {file = "torch-1.13.0+cu117-cp39-cp39-win_amd64.whl", hash = "sha256:609017e9c9f0e20e6e4b82caab3c3c998e347bb179618777ef3570ca206bc283"},
 ]
 typing-extensions = [
     {file = "typing_extensions-4.4.0-py3-none-any.whl", hash = "sha256:16fa4864408f655d35ec496218b85f79b3437c829e93320c7c9215ccfd92489e"},

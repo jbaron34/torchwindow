@@ -10,9 +10,6 @@ from OpenGL import GL as gl
 from cuda import cudart as cu
 
 import threading
-
-import torch
-
 from .shaders import create_shader_program
 from .exceptions import SDLException, CudaException, OpenGLException
 
@@ -132,9 +129,6 @@ class Window(threading.Thread):
         if not self.hidden_window:
             raise SDLException(sdl2.SDL_GetError())
 
-        torch.cuda.init()
-        torch.cuda.synchronize()
-
         with self.gl_context(self.hidden_window):
             err, *_ = cu.cudaGLGetDevices(1, cu.cudaGLDeviceList.cudaGLDeviceListAll)
             if err == cu.cudaError_t.cudaErrorUnknown:
@@ -190,7 +184,7 @@ class Window(threading.Thread):
         sdl2.SDL_DestroyWindow(self.sdl_window)
         sdl2.SDL_Quit()
 
-    def draw(self, tensor: torch.FloatTensor):
+    def draw(self, tensor):
         if not self.running:
             return
 

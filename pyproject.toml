@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "torchwindow"
-version = "1.0.1"
+version = "1.1.0"
 description = "Display tensors directly from GPU"
 authors = ["Jeremy <jbaron34@gmail.com>"]
 readme = "README.md"
